@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ตรวจสอบสถานะการสมัคร - KMUTNB</title>
+    <link rel="stylesheet" href="css/status.css">
+</head>
+<body>
+
+    <div class="status-container">
+        <!-- Header -->
+        <header class="status-header">
+            <h1 class="page-title">ตรวจสอบสถานะการสมัคร</h1>
+            <div class="header-user">
+                <button class="icon-btn" aria-label="แจ้งเตือน">
+                    <span class="bell-icon">🔔</span>
+                </button>
+                <div class="user-avatar">ส</div>
+            </div>
+        </header>
+
+        <!-- Card 1: ข้อมูลผู้สมัครและหลักสูตร -->
+        <div class="card applicant-card">
+            <div class="card-top-bar">
+                <h2 class="card-subtitle">ข้อมูลผู้สมัครและหลักสูตร</h2>
+                <span class="badge-round">รอบที่ 1 Portfolio</span>
+            </div>
+            
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="info-label">รหัสผู้สมัคร</span>
+                    <span class="info-value">69-XXXX-001</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">ชื่อ - นามสกุล</span>
+                    <span class="info-value">นายสมทวย คงควรดอย</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">หลักสูตรที่สมัคร</span>
+                    <span class="info-value">วิศวกรรมสารสนเทศและเครือข่าย</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">สังกัด / คณะ</span>
+                    <span class="info-value">คณะเทคโนโลยีและการจัดการอุตสาหกรรม</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2: ขั้นตอนและสถานะการสมัครเรียน -->
+        <div class="card timeline-card">
+            <h2 class="card-subtitle mb-24">ขั้นตอนและสถานะการสมัครเรียน</h2>
+
+            <div class="timeline">
+                
+                <!-- Step 1: Completed -->
+                <div class="timeline-item completed">
+                    <div class="timeline-marker">
+                        <span class="check-icon">✓</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3 class="step-title">สมัครสมาชิก</h3>
+                        <p class="step-desc">สร้างบัญชีผู้ใช้งานระบบสำเร็จ</p>
+                    </div>
+                    <div class="timeline-status">
+                        <span class="date-badge">15 ม.ค. 2569</span>
+                    </div>
+                </div>
+
+                <!-- Step 2: Completed -->
+                <div class="timeline-item completed">
+                    <div class="timeline-marker">
+                        <span class="check-icon">✓</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3 class="step-title">กรอกใบสมัคร</h3>
+                        <p class="step-desc">บันทึกข้อมูลประวัติและเลือกสาขาวิชาเรียบร้อย</p>
+                    </div>
+                    <div class="timeline-status">
+                        <span class="date-badge">16 ม.ค. 2569</span>
+                    </div>
+                </div>
+
+                <!-- Step 3: Completed -->
+                <div class="timeline-item completed">
+                    <div class="timeline-marker">
+                        <span class="check-icon">✓</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3 class="step-title">อัปโหลดเอกสาร</h3>
+                        <p class="step-desc">แนบหลักฐานการศึกษาและแฟ้มสะสมผลงาน</p>
+                    </div>
+                    <div class="timeline-status">
+                        <span class="date-badge">17 ม.ค. 2569</span>
+                    </div>
+                </div>
+
+                <!-- Step 4: In Progress -->
+                <div class="timeline-item active">
+                    <div class="timeline-marker">4</div>
+                    <div class="timeline-content">
+                        <h3 class="step-title">ตรวจสอบเอกสาร</h3>
+                        <p class="step-desc">เจ้าหน้าที่กำลังดำเนินการตรวจสอบความถูกต้อง</p>
+                    </div>
+                    <div class="timeline-status">
+                        <span class="status-badge orange">กำลังตรวจสอบ</span>
+                    </div>
+                </div>
+
+                <!-- Step 5: Pending -->
+                <div class="timeline-item pending">
+                    <div class="timeline-marker">5</div>
+                    <div class="timeline-content">
+                        <h3 class="step-title">ประกาศผล</h3>
+                        <p class="step-desc">ประกาศรายชื่อผู้มีสิทธิ์สอบสัมภาษณ์</p>
+                    </div>
+                    <div class="timeline-status">
+                        <span class="status-badge gray">รอดำเนินการ</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Footer / Action Area (ปุ่มย้อนกลับอยู่ล่างสุดซ้ายมือ) -->
+        <div class="status-footer">
+            <button class="btn-back" onclick="history.back()">
+                <span class="back-arrow">←</span> 
+                <a href="index.html" class="btn-home">ย้อนกลับ</a>
+            </button>
+        </div>
+
+    </div>
+
+</body>
+</html>

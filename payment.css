@@ -1,0 +1,566 @@
+/* =========================
+   PAYMENT PAGE
+========================= */
+body {
+  background-color: #f8fafc;
+  color: #334155;
+}
+
+/* TOPBAR / NAVBAR */
+.topbar {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 60px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+.topbar-text h1 {
+  font-size: 16px;
+  color: #0f172a;
+}
+
+.topbar-text h2 {
+  font-size: 11px;
+  color: #64748b;
+  font-weight: normal;
+}
+
+.nav-link {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-link a {
+  text-decoration: none;
+  color: #475569;
+  font-size: 14px;
+}
+
+.nav-link a.active,
+.nav-link a:hover {
+  color: #a3320b;
+  font-weight: 600;
+}
+
+.btn-login {
+  text-decoration: none;
+  border: 1px solid #0f172a;
+  color: #0f172a;
+  padding: 6px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  transition: all 0.2s;
+}
+
+.btn-login:hover {
+  background-color: #0f172a;
+  color: #ffffff;
+}
+.payment-container {
+    min-height: 80vh;
+    padding: 50px 20px;
+    background: #f5f7fa;
+}
+
+.payment-card {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.payment-card h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.payment-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+
+/* ข้อมูลการสมัคร */
+
+.payment-info {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.payment-info h2,
+.payment-method h2,
+.upload-section h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.info-row:last-child {
+    border-bottom: none;
+}
+
+
+/* ราคา */
+
+.payment-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: #fff5f0;
+    border: 1px solid #f0d2c5;
+
+    padding: 20px;
+    border-radius: 10px;
+
+    margin-bottom: 25px;
+}
+
+.payment-price span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.payment-price strong {
+    font-size: 28px;
+}
+
+
+/* ช่องทางชำระเงิน */
+
+.payment-method {
+    margin-bottom: 25px;
+}
+
+.method-box {
+    background: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #d71920;
+}
+
+.method-box h3 {
+    margin-top: 0;
+}
+
+.payment-note {
+    color: #d71920;
+    font-size: 14px;
+}
+
+
+/* อัปโหลด */
+
+.upload-section {
+    margin-bottom: 25px;
+}
+
+.upload-section input[type="file"] {
+    width: 100%;
+    padding: 15px;
+    border: 1px dashed #aaa;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+
+/* checkbox */
+
+.payment-confirm {
+    margin: 25px 0;
+}
+
+.payment-confirm input {
+    margin-right: 8px;
+}
+
+
+/* ปุ่ม */
+
+.payment-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.btn-back,
+.btn-payment {
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-back {
+    background: #ddd;
+    color: #333;
+}
+
+.btn-payment {
+    background: #d71920;
+    color: white;
+    border: none;
+}
+
+.btn-payment:hover {
+    background: #b9141a;
+}
+.payment-footer {
+    height: 55px;
+    background: #222;
+    color: #aaa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.payment-footer p {
+    margin: 0;
+    font-size: 12px;
+}
+
+
+
+/* RECEIPT PAGE */
+
+.receipt-header {
+    width: 100%;
+    height: 90px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    padding: 0 70px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.receipt-brand {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.receipt-brand img {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+}
+
+.receipt-brand h1 {
+    margin: 0;
+    font-size: 27px;
+    color: #333;
+}
+
+.receipt-brand p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #777;
+}
+
+
+/* PAGE */
+
+.receipt-page {
+    min-height: calc(100vh - 145px);
+    background: #f5f6f8;
+    padding: 45px 20px 60px;
+    box-sizing: border-box;
+}
+
+.receipt-card {
+    width: 800px;
+    max-width: 100%;
+    margin: auto;
+    background: #ffffff;
+    padding: 40px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+}
+
+
+/* TITLE */
+
+.receipt-title {
+    text-align: center;
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom: 25px;
+}
+
+.receipt-title h2 {
+    margin: 0;
+    font-size: 30px;
+    color: #333;
+}
+
+.receipt-title p {
+    margin: 5px 0 18px;
+    font-size: 13px;
+    color: #999;
+    letter-spacing: 2px;
+}
+
+.success-message {
+    display: inline-block;
+    padding: 8px 18px;
+    background: #eaf8ef;
+    color: #228b4b;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* RECEIPT INFO */
+
+.receipt-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 22px 0;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.receipt-info div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.receipt-info span {
+    font-size: 13px;
+    color: #999;
+}
+
+.receipt-info strong {
+    font-size: 15px;
+    color: #333;
+}
+
+
+/* SECTION */
+
+.receipt-section {
+    margin-top: 28px;
+}
+
+.receipt-section h3 {
+    margin: 0 0 18px;
+    font-size: 17px;
+    color: #333;
+}
+
+
+/* APPLICANT */
+
+.applicant-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.applicant-info div {
+    padding: 14px;
+    background: #f8f9fa;
+    border-radius: 7px;
+}
+
+.applicant-info span {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 12px;
+    color: #888;
+}
+
+.applicant-info strong {
+    font-size: 14px;
+    color: #333;
+}
+
+
+/* TABLE */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 14px;
+    border-bottom: 1px solid #eeeeee;
+    text-align: left;
+    font-size: 14px;
+}
+
+th:last-child,
+td:last-child {
+    text-align: right;
+}
+
+th {
+    background: #f7f7f7;
+    color: #666;
+}
+
+tfoot td {
+    font-size: 17px;
+    font-weight: bold;
+    color: #d71920;
+    border-bottom: none;
+}
+
+
+/* STATUS */
+
+.receipt-status {
+    margin-top: 25px;
+    padding: 15px 18px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.receipt-status span {
+    color: #777;
+    font-size: 14px;
+}
+
+.receipt-status strong {
+    color: #228b4b;
+    font-size: 14px;
+}
+
+
+/* BUTTON */
+
+.receipt-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.receipt-back {
+    padding: 12px 25px;
+    background: #eeeeee;
+    color: #333;
+    text-decoration: none;
+    border-radius: 7px;
+    font-size: 14px;
+}
+
+.print-button {
+    padding: 12px 25px;
+    background: #d71920;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.print-button:hover {
+    background: #b9151b;
+}
+
+
+/* NOTE */
+
+.receipt-note {
+    margin: 25px 0 0;
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+}
+
+
+/* FOOTER */
+
+.receipt-footer {
+    height: 55px;
+    background: #222;
+    color: #aaa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.receipt-footer p {
+    margin: 0;
+    font-size: 12px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .receipt-header {
+        padding: 10px 20px;
+    }
+
+    .receipt-brand img {
+        width: 58px;
+        height: 58px;
+    }
+
+    .receipt-brand h1 {
+        font-size: 21px;
+    }
+
+    .receipt-brand p {
+        font-size: 11px;
+    }
+
+    .receipt-card {
+        padding: 25px;
+    }
+
+    .applicant-info {
+        grid-template-columns: 1fr;
+    }
+
+    .receipt-info {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .receipt-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .receipt-back,
+    .print-button {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+}

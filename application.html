@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ใบสมัครออนไลน์ - KMUTNB</title>
+    <link rel="stylesheet" href="css/styless.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1 class="app-title">ใบสมัครออนไลน์</h1>
+            <div class="header-right">
+                <button class="icon-btn" aria-label="แจ้งเตือน">
+                    <span class="bell-icon"></span>
+                </button>
+                <span class="badge-year">ปีการศึกษา 2570</span>
+            </div>
+        </header>
+
+        <div class="step-wizard">
+            <div class="step-item active">
+                <span class="step-num">1</span>
+                <span class="step-text">ข้อมูลส่วนตัว</span>
+                <span class="step-arrow"></span>
+            </div>
+            <div class="step-item">
+                <span class="step-num">2</span>
+                <span class="step-text">ข้อมูลติดต่อ</span>
+                <span class="step-arrow"></span>
+            </div>
+            <div class="step-item">
+                <span class="step-num">3</span>
+                <span class="step-text">ข้อมูลการศึกษา</span>
+                <span class="step-arrow"></span>
+            </div>
+            <div class="step-item">
+                <span class="step-num">4</span>
+                <span class="step-text">เลือกหลักสูตร</span>
+            </div>
+        </div>
+
+        <div class="form-card-container">
+            <form action="#" method="POST">
+                
+                <section class="form-section">
+                    <h2 class="section-title">ข้อมูลส่วนตัวผู้สมัคร</h2>
+                    
+                    <div class="grid-3-cols">
+                        <div class="form-group">
+                            <label>คำนำหน้านาม</label>
+                            <select class="form-control">
+                                <option value="">เลือกคำนำหน้านาม</option>
+                                <option value="mr">นาย</option>
+                                <option value="mrs">นาง</option>
+                                <option value="miss">นางสาว</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>ชื่อ (ภาษาไทย)</label>
+                            <input type="text" class="form-control" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label>นามสกุล (ภาษาไทย)</label>
+                            <input type="text" class="form-control" placeholder="">
+                        </div>
+                    </div>
+
+                    <div class="grid-2-cols">
+                        <div class="form-group">
+                            <label>วันเดือนปีเกิด</label>
+                            <div class="input-with-icon">
+                                <input type="date" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>เพศ</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="gender" value="male" checked>
+                                    <span class="radio-custom"></span> ชาย
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="gender" value="female">
+                                    <span class="radio-custom"></span> หญิง
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid-2-cols">
+                        <div class="form-group">
+                            <label>สัญชาติ</label>
+                            <input type="text" class="form-control" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label>ศาสนา</label>
+                            <input type="text" class="form-control" placeholder="">
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <section class="form-section">
+                    <h2 class="section-title">ข้อมูลการติดต่อ</h2>
+                    
+                    <div class="form-group full-width">
+                        <label>ที่อยู่ปัจจุบัน</label>
+                        <input type="text" class="form-control" placeholder="">
+                    </div>
+
+                    <div class="grid-2-cols">
+                        <div class="form-group">
+                            <label>แขวง / ตำบล</label>
+                            <input type="text" class="form-control" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label>เขต / อำเภอ</label>
+                            <input type="text" class="form-control" placeholder="">
+                        </div>
+                    </div>
+
+                    <div class="grid-2-cols">
+                        <div class="form-group">
+                            <label>จังหวัด</label>
+                            <select class="form-control">
+                                <option value="">เลือกจังหวัด</option>
+                                <option value="bangkok">กรุงเทพมหานคร</option>
+                                <option value="nonthaburi">นนทบุรี</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>รหัสไปรษณีย์</label>
+                            <input type="text" class="form-control" placeholder="">
+                        </div>
+                    </div>
+                </section>
+
+                <div class="form-actions">
+                    <button type="button" class="btn-outline">บันทึกร่างใบสมัคร</button>
+                    
+                  <a href="status.html" class="back-button">ดำเนินการต่อ</a>
+
+                    </a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</body>
+</html>

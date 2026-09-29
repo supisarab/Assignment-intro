@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>สมัครสมาชิก - KMUTNB</title>
+  
+  <link rel="stylesheet" href="css/styless.css">
+</head>
+<body>
+
+  <!-- NAVBAR HEADER -->
+  <header>
+    <div class="brand">
+      <!-- รูปโลโก้ตามโฟลเดอร์ image/ -->
+      <img src="images/logo_kmutnb-(6).png" alt="KMUTNB Logo">
+      <div class="brand-text">
+        <span class="brand-title">KMUTNB</span>
+        <span class="brand-subtitle">ระบบรับสมัครนักศึกษาใหม่</span>
+      </div>
+    </div>
+
+    <!-- ลิงก์เชื่อมโยงไปยังหน้าต่างๆ ตามไฟล์ในโปรเจกต์ -->
+    <nav>
+      <a href="index.html">หน้าหลัก</a>
+      <a href="login.html">หลักสูตร</a>
+      
+
+    <!-- ลิงก์เข้าสู่ระบบ (หากมีหน้า login.html เพิ่มเติม) -->
+    <a href="login.html" class="btn-login-nav">เข้าสู่ระบบ</a>
+  </header>
+
+  <!-- REGISTER FORM SECTION -->
+  <div class="container">
+    <div class="card">
+      <h2>สมัครสมาชิก</h2>
+      <p class="subtitle">ลงทะเบียนเพื่อเข้าสู่ระบบการกรอกข้อมูลใบสมัครเรียน</p>
+
+      <!-- เมื่อกด Submit สั่งย้ายไปหน้า index.html -->
+      <form action="login.html">
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label>ชื่อ (First Name) *</label>
+            <input type="text" name="firstname" placeholder="สมชาย" required>
+          </div>
+          <div class="form-group">
+            <label>นามสกุล (Last Name) *</label>
+            <input type="text" name="lastname" placeholder="ใจดี" required>
+          </div>
+        </div>
+
+        <div class="form-group full">
+          <label>เลขบัตรประจำตัวประชาชน (13 หลัก) *</label>
+          <input type="text" name="citizen_id" placeholder="1-1000-00000-00-0" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>อีเมล (Email) *</label>
+            <input type="email" name="email" placeholder="somchai@email.com" required>
+          </div>
+          <div class="form-group">
+            <label>เบอร์โทรศัพท์ *</label>
+            <input type="tel" name="phone" placeholder="081-234-5678" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>รหัสผ่าน (Password) *</label>
+            <input type="password" name="password" placeholder="••••••••" required>
+          </div>
+          <div class="form-group">
+            <label>ยืนยันรหัสผ่าน *</label>
+            <input type="password" name="confirm_password" placeholder="••••••••" required>
+          </div>
+        </div>
+
+        <div class="terms">
+          <input type="checkbox" id="agree" required>
+          <label for="agree">ข้าพเจ้ายอมรับเงื่อนไขและข้อตกลงในการสมัครเรียน</label>
+        </div>
+
+        <button type="submit" class="btn-submit">สมัครสมาชิก</button>
+      </form>
+
+      <div class="login-link">
+        มีบัญชีอยู่แล้ว? <a href="login.html">เข้าสู่ระบบ</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

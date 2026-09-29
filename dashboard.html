@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน้าแรก - KMUTNB Student Dashboard</title>
+    <link rel="stylesheet" href="css/styless.css">
+</head>
+<body class="dashboard-bg">
+
+    <!-- Top Navigation Bar (แบบไม่มี Sidebar ดำ) -->
+    <header class="top-nav">
+        <a href="index.html" class="brand-logo">
+            <div class="logo-icon">มจพ</div>
+            <span>KMUTNB <small>ADMISSION SYSTEM</small></span>
+        </a>
+        <nav class="nav-links">
+            <a href="index.html" class="active">หน้าแรก</a>
+            <a href="program.html">หลักสูตรที่เปิดรับสมัคร</a>
+            <a href="document.html">เอกสาร</a>
+            <a href="status.html">ตรวจสอบสถานะ</a>
+            <a href="application.html">ใบสมัครออนไลน์</a>
+        </nav>
+        <div class="top-user-actions">
+            <span class="user-display">name</span>
+            <a href="login.html" class="btn-top-logout">ออกจากระบบ</a>
+        </div>
+    </header>
+
+    <!-- Main Content Center Container -->
+    <main class="dashboard-container-full">
+        <div class="dashboard-inner">
+            
+            <!-- Sub Header Bar -->
+            <div class="dash-topbar">
+                <h1 class="page-title">หน้าแรก</h1>
+                <div class="topbar-actions">
+                    <button type="button" class="btn-icon" aria-label="Notifications">🔔</button>
+                    <span class="academic-year-badge">ปีการศึกษา 2570</span>
+                </div>
+            </div>
+
+            <!-- Hero Welcome Banner -->
+            <section class="welcome-banner">
+                <div class="banner-info">
+                    <h2>สวัสดี! ยินดีต้อนรับสู่ระบบรับสมัคร</h2>
+                    <p>กรุณากรอกข้อมูลส่วนตัวและอัปโหลดเอกสารหลักฐานให้ครบถ้วนเพื่อผลประโยชน์ในการสมัครเรียนของคุณ</p>
+                </div>
+                <div class="banner-badge">🎓</div>
+            </section>
+
+            <!-- Application Status Cards -->
+            <section class="status-cards-grid">
+                <!-- Status Card 1 -->
+                <article class="status-card">
+                    <div class="card-header">
+                        <span class="card-subtitle">สถานะใบสมัคร</span>
+                        <span class="badge badge-pending">กำลังดำเนินการ</span>
+                    </div>
+                    <h3 class="card-title">หลักสูตรวิศวกรรมศาสตรบัณฑิต</h3>
+                    <p class="card-description">สาขาวิชาวิศวกรรมคอมพิวเตอร์ (หลักสูตรปกติ)</p>
+                </article>
+
+                <!-- Status Card 2 -->
+                <article class="status-card">
+                    <div class="card-header">
+                        <span class="card-subtitle">การตรวจสอบเอกสาร</span>
+                        <span class="badge badge-info">3 จาก 5 เอกสาร</span>
+                    </div>
+                    <h3 class="card-title">อัปโหลดแล้ว 3 รายการ</h3>
+                    <p class="card-description">รออัปโหลด: สำเนาทะเบียนบ้าน, หลักฐานชำระเงิน</p>
+                </article>
+
+                <!-- Status Card 3 -->
+                <article class="status-card">
+                    <div class="card-header">
+                        <span class="card-subtitle">สถานะการชำระเงิน</span>
+                        <span class="badge badge-danger">รอชำระเงิน</span>
+                    </div>
+                    <h3 class="card-title">ยอดชำระ: 500.00 บาท</h3>
+                    <p class="card-description">ค่าธรรมเนียมการสมัครสอบคัดเลือก</p>
+                </article>
+            </section>
+
+            <!-- Bottom Content Grid (Action Shortcuts & Activity Log) -->
+            <section class="dashboard-details-grid">
+                <!-- Quick Actions Panel -->
+                <div class="panel-card">
+                    <h3 class="panel-title">ทางลัดการดำเนินการ</h3>
+                    <div class="shortcut-list">
+                        <!-- Action Item 1 -->
+                        <div class="shortcut-item">
+                            <div class="shortcut-icon icon-bg-purple">📝</div>
+                            <div class="shortcut-details">
+                                <strong>กรอกใบสมัครเรียน</strong>
+                                <p>กรอกข้อมูลส่วนตัว ประวัติการศึกษา และเลือกหลักสูตร</p>
+                            </div>
+                            <a href="program.html" class="btn-action btn-primary">ดำเนินการ</a>
+                        </div>
+
+                        <!-- Action Item 2 -->
+                        <div class="shortcut-item">
+                            <div class="shortcut-icon icon-bg-orange">📤</div>
+                            <div class="shortcut-details">
+                                <strong>อัปโหลดเอกสารหลักฐาน</strong>
+                                <p>อัปโหลดไฟล์ ปพ.1, บัตรประชาชน และเอกสารอื่นๆ</p>
+                            </div>
+                            <a href="document.html" class="btn-action btn-accent">อัปโหลด</a>
+                        </div>
+
+                        <!-- Action Item 3 -->
+                        <div class="shortcut-item">
+                            <div class="shortcut-icon icon-bg-green">💳</div>
+                            <div class="shortcut-details">
+                                <strong>ชำระเงินค่าสมัคร</strong>
+                                <p>สแกน QR Code หรืออัปโหลดหลักฐานการโอนเงิน</p>
+                            </div>
+                            <a href="payment.html" class="btn-action btn-success">ชำระเงิน</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Activity Log Panel -->
+                <div class="panel-card">
+                    <h3 class="panel-title">ประวัติกิจกรรมล่าสุด</h3>
+                    <ul class="activity-timeline">
+                        <li class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <p class="activity-text">ส่งเอกสาร "ใบแสดงผลการเรียน (ปพ.1)" เรียบร้อยแล้ว</p>
+                                <span class="activity-time">เมื่อวานนี้, 14:20 น.</span>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <p class="activity-text">แก้ไขข้อมูลส่วนตัวขั้นตอนสำเร็จ</p>
+                                <span class="activity-time">2 วันที่ผ่านมา, 09:15 น.</span>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <p class="activity-text">สมัครบัญชีผู้ใช้ระบบการรับสมัครเรียน</p>
+                                <span class="activity-time">3 วันที่ผ่านมา, 11:00 น.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+</body>
+</html>

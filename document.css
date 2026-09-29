@@ -1,0 +1,283 @@
+/* Global Reset & Styling */
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Sarabun', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+    background-color: #F4F6F9;
+    color: #333333;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.doc-container {
+    width: 100%;
+    max-width: 1100px;
+}
+
+/* Header Bar */
+.doc-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.page-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.icon-btn {
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.icon-btn:hover {
+    background-color: #F9FAFB;
+}
+
+.bell-icon {
+    width: 18px;
+    height: 18px;
+    stroke: #4B5563;
+}
+
+.year-badge {
+    background-color: #EEF2FF;
+    color: #4F46E5;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 6px;
+}
+
+/* Base Card Styling */
+.card {
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+    border: 1px solid #E5E7EB;
+}
+
+.card-subtitle {
+    font-size: 15px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 20px;
+}
+
+.mb-16 {
+    margin-bottom: 16px;
+}
+
+/* Table Styling */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.doc-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.doc-table th {
+    font-size: 11px;
+    font-weight: 600;
+    color: #9CA3AF;
+    padding: 12px 16px;
+    border-bottom: 1px solid #F3F4F6;
+}
+
+.doc-table td {
+    padding: 16px;
+    font-size: 13px;
+    border-bottom: 1px solid #F3F4F6;
+    vertical-align: middle;
+}
+
+.doc-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Column Widths & Alignments */
+.col-name { width: 45%; }
+.col-status { width: 20%; }
+.col-size { width: 15%; }
+.col-action { width: 20%; text-align: right; }
+
+.doc-name {
+    font-weight: 600;
+    color: #1F2937;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.doc-icon {
+    font-size: 16px;
+    opacity: 0.7;
+}
+
+.file-size {
+    color: #6B7280;
+}
+
+/* Status Tags */
+.status-tag {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.status-tag.success {
+    background-color: #ECFDF5;
+    color: #059669;
+}
+
+.status-tag.warning {
+    background-color: #FFFBEB;
+    color: #D97706;
+}
+
+.status-tag.neutral {
+    background-color: #F3F4F6;
+    color: #6B7280;
+}
+
+/* Table Action Buttons */
+.action-btns {
+    text-align: right;
+}
+
+.btn-text {
+    color: #4B5563;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    margin-left: 12px;
+    transition: color 0.2s;
+}
+
+.btn-text:hover {
+    color: #111827;
+}
+
+.btn-text.danger {
+    color: #EF4444;
+}
+
+.btn-text.danger:hover {
+    color: #B91C1C;
+}
+
+.btn-upload {
+    background-color: #EA580C;
+    color: #FFFFFF;
+    padding: 6px 16px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-block;
+    transition: background-color 0.2s;
+}
+
+.btn-upload:hover {
+    background-color: #C2410C;
+}
+
+/* Pure CSS Dropzone Upload Area (No JS) */
+.file-input {
+    display: none;
+}
+
+.dropzone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 36px 20px;
+    border: 2px dashed #CBD5E1;
+    border-radius: 8px;
+    background-color: #FAFAFA;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.dropzone:hover {
+    border-color: #EA580C;
+    background-color: #FFF7ED;
+}
+
+.cloud-icon-wrapper {
+    width: 44px;
+    height: 44px;
+    background-color: #EEF2FF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    transition: transform 0.2s;
+}
+
+.dropzone:hover .cloud-icon-wrapper {
+    transform: translateY(-2px);
+    background-color: #FFEDD5;
+}
+
+.cloud-icon {
+    width: 22px;
+    height: 22px;
+    stroke: #4F46E5;
+}
+
+.dropzone:hover .cloud-icon {
+    stroke: #EA580C;
+}
+
+.dropzone-text {
+    font-size: 13px;
+    color: #374151;
+    margin-bottom: 4px;
+}
+
+.dropzone-text strong {
+    font-weight: 700;
+}
+
+.dropzone-text span {
+    color: #EA580C;
+    text-decoration: underline;
+}
+
+.dropzone-hint {
+    font-size: 11px;
+    color: #9CA3AF;
+}

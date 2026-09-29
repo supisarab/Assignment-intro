@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เข้าสู่ระบบ - KMUTNB</title>
+    <link rel="stylesheet" href="css/styless.css">
+</head>
+<body class="login-bg">
+
+    <!-- Top Navigation -->
+    <header class="login-nav">
+        <a href="index.html" class="logo-group">
+            <img src="images/logo_kmutnb-(6).png" alt="KMUTNB Logo" class="kmutnb-logo">
+            <div class="logo-text">
+                <strong>KMUTNB</strong>
+                <span>ระบบรับสมัครนักศึกษาใหม่</span>
+            </div>
+        </a>
+        <nav class="nav-links-light">
+           
+            
+        </nav>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="login-container">
+        <div class="login-card">
+            <h2>เข้าสู่ระบบ</h2>
+            <p class="subtitle">ลงชื่อเข้าใช้งานสำหรับผู้สมัครเก่าและผู้มีสิทธิ์ใช้งาน</p>
+
+            <form action="dashboard.html" method="get">
+                <!-- Username / Email Field -->
+                <div class="form-group">
+                    <label>อีเมลหรือชื่อผู้ใช้ <span>*</span></label>
+                    <input type="text" placeholder="somchai@email.com" required>
+                </div>
+
+                <div class="form-group">
+     <label>รหัสผ่าน *</label>
+    <div class="password-box">
+        
+        <!-- 1. ช่องซ่อนรหัส (ตาปิด - แสดงเส้นขีดฆ่าตา) -->
+        <div class="pass-wrapper pass-hidden">
+            <input type="password" placeholder="••••••••" class="input-field">
+            <a href="#show-pass" class="eye-btn" title="แสดงรหัสผ่าน">
+                <span class="css-eye closed"></span>
+            </a>
+        </div>
+
+        <!-- 2. ช่องโชว์รหัส (ตาเปิด - แสดงลูกตา) -->
+        <div class="pass-wrapper pass-visible" id="show-pass">
+            
+            <a href="#" class="eye-btn" title="ซ่อนรหัสผ่าน">
+                <span class="css-eye open"></span>
+            </a>
+        </div>
+
+    </div>
+</div>
+
+                <!-- Remember Me Checkbox -->
+                <div class="remember-group">
+                    <label class="custom-checkbox">
+                        <input type="checkbox" checked>
+                        <span class="checkmark"></span>
+                        จดจำฉันในระบบ
+                    </label>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn-submit">เข้าสู่ระบบ</button>
+            </form>
+
+            <!-- Register Link -->
+            <div class="login-footer">
+                ยังไม่มีบัญชี? <a href="register.html">สมัครสมาชิกที่นี่</a>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

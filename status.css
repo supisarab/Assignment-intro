@@ -1,0 +1,246 @@
+```css
+/* 1. Reset ค่าเริ่มต้นและตั้งค่าฟอนต์หลัก */
+* {
+  box-sizing: border-box; /* คิดรวม padding และ border เข้าไปในความกว้าง/สูงขององค์ประกอบ */
+  margin: 0;             /* ล้างระยะห่างภายนอกทั้งหมด */
+  padding: 0;            /* ล้างระยะห่างภายในทั้งหมด */
+  font-family: 'Sarabun', system-ui, -apple-system, sans-serif; /* ฟอนต์หลักของระบบ */
+}
+
+/* 2. จัดโครงสร้างพื้นหลังหน้าเว็บ และดันคอนเทนเนอร์ให้อยู่ตรงกลาง */
+body {
+  background-color: #f4f6f8; /* สีพื้นหลังของหน้าเว็บ */
+  min-height: 100vh;         /* ความสูงอย่างน้อยเต็มหน้าจอ */
+  display: flex;             /* ใช้ Flexbox ในการจัดวาง */
+  justify-content: center;   /* จัดองค์ประกอบให้อยู่กึ่งกลางแนวนอน */
+  align-items: flex-start;   /* จัดองค์ประกอบให้เริ่มจากด้านบนแนวตั้ง */
+  padding: 32px 24px;        /* เว้นระยะห่างรอบขอบหน้าจอ */
+}
+
+/* 3. คอนเทนเนอร์หลัก (ขยายกว้างเต็มตาแต่ไม่เกิน 1200px) */
+.status-container {
+  width: 100%;             /* กว้างเต็มพื้นที่ */
+  max-width: 1200px;       /* ความกว้างสูงสุดไม่เกิน 1200px */
+  display: flex;           /* จัดเรียงกล่องภายในเป็น Flexbox */
+  flex-direction: column;  /* เรียงเนื้อหาจากบนลงล่าง */
+  gap: 20px;               /* ระยะห่างระหว่างกล่องแต่ละส่วน */
+}
+
+/* 4. ส่วนหัวของหน้า (Header) */
+.status-header {
+  display: flex;           /* จัดเรียงข้อความหัวข้อกับส่วนผู้ใช้ให้อยู่แถวเดียวกัน */
+  justify-content: space-between; /* ชิดซ้ายและชิดขวาคนละฝั่ง */
+  align-items: center;     /* จัดให้อยู่ตรงกลางแนวตั้ง */
+  margin-bottom: 8px;      /* เว้นระยะห่างด้านล่าง */
+}
+
+.page-title {
+  font-size: 1.5rem;       /* ขนาดตัวอักษรหัวข้อหน้า */
+  color: #1f2937;          /* สีตัวอักษรเทาเข้ม */
+}
+
+.header-user {
+  display: flex;           /* จัดวางไอคอนแจ้งเตือนและโปรไฟล์ให้อยู่คู่กัน */
+  align-items: center;     /* จัดตรงกลางแนวตั้ง */
+  gap: 12px;               /* ระยะห่างระหว่างไอคอนและโปรไฟล์ */
+}
+
+.icon-btn {
+  background: #ffffff;     /* พื้นหลังปุ่มไอคอนสีขาว */
+  border: 1px solid #e5e7eb; /* เส้นขอบปุ่ม */
+  border-radius: 50%;      /* ทำเป็นรูปวงกลม */
+  width: 38px;             /* ความกว้าง */
+  height: 38px;            /* ความสูง */
+  display: flex;           /* จัดวางไอคอนภายใน */
+  align-items: center;     /* จัดตรงกลางแนวตั้ง */
+  justify-content: center; /* จัดตรงกลางแนวนอน */
+  cursor: pointer;         /* เปลี่ยนเคอร์เซอร์เป็นรูปมือ */
+}
+
+.user-avatar {
+  width: 38px;             /* ความกว้างรูปโปรไฟล์ */
+  height: 38px;            /* ความสูงรูปโปรไฟล์ */
+  background-color: #e5e7eb; /* สีพื้นหลังวงกลมโปรไฟล์ */
+  border-radius: 50%;      /* ทำเป็นรูปวงกลม */
+  display: flex;           /* จัดวางตัวอักษรภายใน */
+  align-items: center;     /* จัดตรงกลางแนวตั้ง */
+  justify-content: center; /* จัดตรงกลางแนวนอน */
+  font-weight: bold;       /* ตัวอักษรตัวหนา */
+}
+
+/* 5. สไตล์การ์ดข้อมูลทั่วไป (Cards) */
+.card {
+  background: #ffffff;     /* พื้นหลังการ์ดสีขาว */
+  border-radius: 12px;     /* ความโค้งมนของมุมการ์ด */
+  padding: 28px;           /* ระยะห่างด้านในตัวการ์ด */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); /* ใส่เงาเบาๆ */
+}
+
+.card-top-bar {
+  display: flex;           /* จัดวางหัวข้อการ์ดและป้ายบอกรอบ */
+  justify-content: space-between; /* แยกชิดซ้าย-ขวา */
+  align-items: center;     /* จัดตรงกลางแนวตั้ง */
+  margin-bottom: 20px;      /* ระยะห่างด้านล่าง */
+}
+
+.card-subtitle {
+  font-size: 1.2rem;       /* ขนาดตัวอักษรหัวข้อการ์ด */
+  color: #111827;          /* สีตัวอักษร */
+}
+
+.badge-round {
+  background-color: #eff6ff; /* พื้นหลังป้ายบอกรอบสีฟ้าอ่อน */
+  color: #2563eb;          /* ตัวอักษรสีน้ำเงิน */
+  padding: 6px 14px;       /* ระยะห่างภายในป้าย */
+  border-radius: 9999px;   /* ทำป้ายเป็นทรงแคปซูล */
+  font-size: 0.875rem;     /* ขนาดตัวอักษร */
+  font-weight: 500;        /* ความหนาตัวอักษร */
+}
+
+/* 6. การจัดตารางข้อมูลผู้สมัคร (Grid Display) */
+.info-grid {
+  display: grid;           /* เปิดใช้งาน CSS Grid */
+  grid-template-columns: repeat(4, 1fr); /* แบ่งเป็น 4 คอลัมน์เท่ากัน */
+  gap: 20px;               /* ระยะห่างระหว่างช่อง */
+}
+
+.info-item {
+  display: flex;           /* จัดวาง Label และ Value */
+  flex-direction: column;  /* เรียงจากบนลงล่าง */
+  gap: 6px;                /* ระยะห่างระหว่างข้อความ */
+}
+
+.info-label {
+  font-size: 0.875rem;     /* ขนาดตัวอักษรหัวข้อข้อมูล */
+  color: #6b7280;          /* สีข้อความเทา */
+}
+
+.info-value {
+  font-weight: 600;        /* ตัวอักษรตัวหนา */
+  color: #1f2937;          /* สีข้อความเข้ม */
+  font-size: 1rem;         /* ขนาดตัวอักษร */
+}
+
+/* 7. ลำดับขั้นตอนการสมัคร (Timeline) */
+.mb-24 {
+  margin-bottom: 24px;      /* เว้นระยะห่างด้านล่าง 24px */
+}
+
+.timeline {
+  display: flex;           /* จัดวางรายการขั้นตอน */
+  flex-direction: column;  /* เรียงต่อกันเป็นแนวตั้ง */
+  gap: 24px;               /* ระยะห่างระหว่างขั้นตอน */
+}
+
+.timeline-item {
+  display: flex;           /* จัดวางหมุด เนื้อหา และป้ายสถานะ */
+  align-items: flex-start; /* ชิดขอบบน */
+  gap: 16px;               /* ระยะห่างระหว่างองค์ประกอบ */
+}
+
+.timeline-marker {
+  width: 32px;             /* ความกว้างวงกลมหมุด */
+  height: 32px;            /* ความสูงวงกลมหมุด */
+  border-radius: 50%;      /* ทำเป็นรูปวงกลม */
+  background-color: #e5e7eb; /* สีหมุดปกติ (เทา) */
+  display: flex;           /* จัดวางตัวเลขหรือไอคอนภายใน */
+  align-items: center;     /* จัดตรงกลางแนวตั้ง */
+  justify-content: center; /* จัดตรงกลางแนวนอน */
+  font-weight: bold;       /* ตัวอักษรตัวหนา */
+  font-size: 0.9rem;       /* ขนาดตัวอักษร */
+  flex-shrink: 0;          /* ป้องกันไม่ให้หมุดโดนบีบจนเบี้ยว */
+}
+
+/* สถานะที่ทำเสร็จแล้ว (สีเขียว) */
+.timeline-item.completed .timeline-marker {
+  background-color: #16a34a; /* สีพื้นหลังเขียว */
+  color: #ffffff;          /* ไอคอน/ตัวอักษรสีขาว */
+}
+
+/* สถานะที่กำลังดำเนินการ (สีส้ม) */
+.timeline-item.active .timeline-marker {
+  background-color: #ea580c; /* สีพื้นหลังส้ม */
+  color: #ffffff;          /* ไอคอน/ตัวอักษรสีขาว */
+}
+
+.timeline-content {
+  flex: 1;                 /* ให้ส่วนเนื้อหายืดขยายเต็มพื้นที่ตรงกลาง */
+}
+
+.step-title {
+  font-size: 1.05rem;      /* ขนาดตัวอักษรชื่อขั้นตอน */
+  color: #1f2937;          /* สีตัวอักษร */
+}
+
+.step-desc {
+  font-size: 0.9rem;       /* ขนาดตัวอักษรคำอธิบาย */
+  color: #6b7280;          /* สีตัวอักษรเทา */
+  margin-top: 2px;         /* ระยะห่างด้านบน */
+}
+
+.date-badge {
+  font-size: 0.875rem;     /* ขนาดตัวอักษรวันที่ */
+  color: #6b7280;          /* สีตัวอักษรเทา */
+}
+
+.status-badge {
+  padding: 6px 12px;       /* ระยะห่างด้านในป้ายสถานะ */
+  border-radius: 6px;      /* มุมโค้งมน */
+  font-size: 0.85rem;      /* ขนาดตัวอักษร */
+  font-weight: 500;        /* ความหนาตัวอักษร */
+}
+
+.status-badge.orange {
+  background-color: #fff7ed; /* พื้นหลังสีส้มอ่อน */
+  color: #c2410c;          /* ข้อความสีส้มเข้ม */
+}
+
+.status-badge.gray {
+  background-color: #f3f4f6; /* พื้นหลังสีเทาอ่อน */
+  color: #6b7280;          /* ข้อความสีเทาเข้ม */
+}
+
+/* 8. ส่วนท้ายและปุ่มย้อนกลับ (Footer & Back Button) */
+.status-footer {
+  display: flex;           /* จัดวางส่วนท้าย */
+  justify-content: flex-start; /* วางปุ่มชิดซ้ายสุด */
+  margin-top: 8px;         /* เว้นระยะห่างด้านบน */
+}
+
+.btn-back {
+  display: inline-flex;    /* จัดปุ่มและไอคอนลูกศร */
+  align-items: center;     /* จัดตรงกลางแนวตั้ง */
+  gap: 8px;                /* ระยะห่างระหว่างลูกศรกับข้อความ */
+  background-color: #ffffff; /* พื้นหลังปุ่มสีขาว */
+  color: #374151;          /* สีข้อความ */
+  border: 1px solid #d1d5db; /* เส้นขอบปุ่ม */
+  padding: 10px 20px;      /* ขนาดปุ่ม (กว้างxยาว) */
+  border-radius: 8px;      /* ความโค้งมนของปุ่ม */
+  font-size: 0.95rem;      /* ขนาดตัวอักษร */
+  font-weight: 500;        /* ความหนาตัวอักษร */
+  cursor: pointer;         /* เปลี่ยนเคอร์เซอร์เป็นรูปมือ */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); /* เงาปุ่มเบาๆ */
+  transition: all 0.2s ease; /* ทำให้เอฟเฟกต์เปลี่ยนสีนุ่มนวล */
+}
+
+.btn-back:hover {
+  background-color: #f9fafb; /* เปลี่ยนสีพื้นหลังเมื่อวางเมาส์ */
+  border-color: #9ca3af;     /* เปลี่ยนสีเส้นขอบเมื่อวางเมาส์ */
+  color: #111827;            /* เปลี่ยนสีข้อความเมื่อวางเมาส์ */
+}
+
+/* 9. รองรับการแสดงผลบนหน้าจอขนาดต่าง ๆ (Responsive) */
+@media (max-width: 1024px) {
+  /* เมื่อจอแคบกว่า 1024px ให้ปรับตารางข้อมูลเป็น 2 คอลัมน์ */
+  .info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  /* เมื่อจอมือถือแคบกว่า 640px ให้ปรับตารางข้อมูลเป็น 1 คอลัมน์เดี่ยว */
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
